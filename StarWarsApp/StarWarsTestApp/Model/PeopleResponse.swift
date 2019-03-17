@@ -6,7 +6,16 @@
 //  Copyright © 2019 Loginov Arkadiy. All rights reserved.
 //
 
-class PeopleResponse: Decodable {
-    let count : Int = 0
+struct PeopleResponse: Decodable {
+    let count : Int
     let result : [Person]
+    enum CodingCase: String, CodingKey{
+        case count
+        case result
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingCase.self)
+        count = try values.decode(Int.self, forKey: .count)
+        result = try values.decode([Person].self, forKey: .result)
+    }
 }

@@ -6,8 +6,21 @@
 //  Copyright © 2019 Loginov Arkadiy. All rights reserved.
 //
 
-class Person : Decodable {
-    let name : String = ""
-    let height : Int = 0
-    let birth_year : String = ""
+struct Person: Decodable {
+    let name : String
+    let height : Int
+    let birthYear : String
+    
+    private enum CodingKeys: String, CodingKey{
+        case name
+        case height
+        case birthYear = "birth_year"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decode(String.self, forKey: .name)
+        height = try values.decode(Int.self, forKey: .height)
+        birthYear = try values.decode(String.self, forKey: .birthYear)
+    }
 }
