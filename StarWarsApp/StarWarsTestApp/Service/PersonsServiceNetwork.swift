@@ -25,7 +25,7 @@ class PersonsServiceNetwork: PersonService {
     
     
     func getPeople(_completionHandler: @escaping (([Person]) -> Void)) {
-        request("https://swapi.co/api/people").responseData{
+        request("https://swapi.co/api/people/").responseData{
             switch $0.result {
                 case let .success(data):
                     let decoder = JSONDecoder()
