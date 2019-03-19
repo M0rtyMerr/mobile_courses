@@ -17,6 +17,7 @@
 		5F3D862C223E5F29006388FE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D862B223E5F29006388FE /* Person.swift */; };
 		5F3D862F223E5F9A006388FE /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D862E223E5F9A006388FE /* PersonService.swift */; };
 		5F3D8631223E636D006388FE /* PeopleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D8630223E636D006388FE /* PeopleResponse.swift */; };
+		5FC3CFD3223F022C0007E63C /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3CFD2223F022C0007E63C /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5F3D862B223E5F29006388FE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5F3D862E223E5F9A006388FE /* PersonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
 		5F3D8630223E636D006388FE /* PeopleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponse.swift; sourceTree = "<group>"; };
+		5FC3CFD2223F022C0007E63C /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				5F3D8616223E5AFF006388FE /* AppDelegate.swift */,
 				5F3D8618223E5AFF006388FE /* ViewController.swift */,
+				5FC3CFD2223F022C0007E63C /* PersonViewController.swift */,
 				5F3D861A223E5AFF006388FE /* Main.storyboard */,
 				5F3D861D223E5AFF006388FE /* Assets.xcassets */,
 				5F3D861F223E5AFF006388FE /* LaunchScreen.storyboard */,
@@ -194,10 +197,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StarWarsTestApp/Pods-StarWarsTestApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -235,6 +242,7 @@
 				5F3D8629223E5BE5006388FE /* PersonsServiceNetwork.swift in Sources */,
 				5F3D862F223E5F9A006388FE /* PersonService.swift in Sources */,
 				5F3D8631223E636D006388FE /* PeopleResponse.swift in Sources */,
+				5FC3CFD3223F022C0007E63C /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

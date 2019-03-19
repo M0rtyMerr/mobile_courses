@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'StarWarsTestApp' do
     pod 'Alamofire'
+    pod 'RealmSwift'
 end

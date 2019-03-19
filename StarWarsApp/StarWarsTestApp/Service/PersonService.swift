@@ -7,6 +7,6 @@
 //
 
 protocol PersonService {
-    func getPeople(_completionHandler: @escaping(([Person]) -> Void))
-    func getPersonByID(id:Int, _completionHandler: @escaping ((Person) -> Void))
+    func getPeople(_ completionHandler: @escaping(([Person]) -> Void))
+    func getPersonByID(id: Int, _ completionHandler: @escaping ((Person) -> Void))
 }
