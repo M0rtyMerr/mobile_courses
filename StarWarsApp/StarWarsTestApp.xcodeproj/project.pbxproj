@@ -17,6 +17,8 @@
 		5F3D862C223E5F29006388FE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D862B223E5F29006388FE /* Person.swift */; };
 		5F3D862F223E5F9A006388FE /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D862E223E5F9A006388FE /* PersonService.swift */; };
 		5F3D8631223E636D006388FE /* PeopleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D8630223E636D006388FE /* PeopleResponse.swift */; };
+		5F8984512242A294009015E9 /* PersonDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8984502242A294009015E9 /* PersonDBService.swift */; };
+		5F8984532242A360009015E9 /* PersonDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8984522242A360009015E9 /* PersonDto.swift */; };
 		5FC3CFD3223F022C0007E63C /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3CFD2223F022C0007E63C /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		5F3D862B223E5F29006388FE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5F3D862E223E5F9A006388FE /* PersonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
 		5F3D8630223E636D006388FE /* PeopleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponse.swift; sourceTree = "<group>"; };
+		5F8984502242A294009015E9 /* PersonDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDBService.swift; sourceTree = "<group>"; };
+		5F8984522242A360009015E9 /* PersonDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDto.swift; sourceTree = "<group>"; };
 		5FC3CFD2223F022C0007E63C /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 			children = (
 				5F3D8628223E5BE5006388FE /* PersonsServiceNetwork.swift */,
 				5F3D862E223E5F9A006388FE /* PersonService.swift */,
+				5F8984502242A294009015E9 /* PersonDBService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				5F3D862B223E5F29006388FE /* Person.swift */,
 				5F3D8630223E636D006388FE /* PeopleResponse.swift */,
+				5F8984522242A360009015E9 /* PersonDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,7 +248,9 @@
 				5F3D8629223E5BE5006388FE /* PersonsServiceNetwork.swift in Sources */,
 				5F3D862F223E5F9A006388FE /* PersonService.swift in Sources */,
 				5F3D8631223E636D006388FE /* PeopleResponse.swift in Sources */,
+				5F8984512242A294009015E9 /* PersonDBService.swift in Sources */,
 				5FC3CFD3223F022C0007E63C /* PersonViewController.swift in Sources */,
+				5F8984532242A360009015E9 /* PersonDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

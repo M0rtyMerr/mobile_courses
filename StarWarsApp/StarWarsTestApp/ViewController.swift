@@ -7,26 +7,48 @@
 //
 
 import UIKit
+import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var notificationToken: NotificationToken?
+    
+    private let dbService = PersonDBService()
+    
+    private lazy var personDtos = dbService.getAll()
+    
     let identifier = "cell"
     let personService: PersonService = PersonsServiceNetwork()
     var persons = [Person]()
-    var selected: Int = 0
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-
+        tableView.register(UINib(nibName: "PersonTableVIewCell", bundle: nil), forCellReuseIdentifier: identifier)
+        
+        tableView.tableFooterView = UIView()
+        
+    
+        notificationToken = personDtos.observe{ [weak self] _ in
+            self?.tableView.reloadData()
+        }
+        
         personService.getPeople { persons in
             self.persons = persons
+            for p in persons {
+                self.dbService.add(person: p)
+                print(p.name)
+            }
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-
+    
+    deinit {
+        notificationToken?.invalidate()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -44,12 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selected = indexPath.row
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc: PersonViewController = segue.destination as! PersonViewController
         vc.person = persons[tableView.indexPathForSelectedRow!.row]
     }
 }
+
