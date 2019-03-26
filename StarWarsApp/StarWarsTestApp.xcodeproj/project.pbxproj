@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		135D1B16FAF257BB9D6EEDAD /* Pods_StarWarsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548149A8869EB083F7689842 /* Pods_StarWarsTestApp.framework */; };
+		5F38CDD1224A7051004BF6BB /* MyPersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F38CDCF224A7051004BF6BB /* MyPersonTableViewCell.swift */; };
+		5F38CDD2224A7052004BF6BB /* MyPersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F38CDD0224A7051004BF6BB /* MyPersonTableViewCell.xib */; };
 		5F3D8617223E5AFF006388FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D8616223E5AFF006388FE /* AppDelegate.swift */; };
 		5F3D8619223E5AFF006388FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D8618223E5AFF006388FE /* ViewController.swift */; };
 		5F3D861C223E5AFF006388FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D861A223E5AFF006388FE /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		1FD6029252525C202C362723 /* Pods-StarWarsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTestApp.release.xcconfig"; path = "Target Support Files/Pods-StarWarsTestApp/Pods-StarWarsTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		4EBB4695234391510F6AAF71 /* Pods-StarWarsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsTestApp/Pods-StarWarsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		548149A8869EB083F7689842 /* Pods_StarWarsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F38CDCF224A7051004BF6BB /* MyPersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPersonTableViewCell.swift; sourceTree = "<group>"; };
+		5F38CDD0224A7051004BF6BB /* MyPersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPersonTableViewCell.xib; sourceTree = "<group>"; };
 		5F3D8613223E5AFF006388FE /* StarWarsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F3D8616223E5AFF006388FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F3D8618223E5AFF006388FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5F38CDC822484426004BF6BB /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5F38CDC922484439004BF6BB /* Main */,
+				5FC3CFD2223F022C0007E63C /* PersonViewController.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5F38CDC922484439004BF6BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5F3D8618223E5AFF006388FE /* ViewController.swift */,
+				5F38CDCE2248448A004BF6BB /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5F38CDCE2248448A004BF6BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5F38CDCF224A7051004BF6BB /* MyPersonTableViewCell.swift */,
+				5F38CDD0224A7051004BF6BB /* MyPersonTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		5F3D860A223E5AFE006388FE = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5F3D8616223E5AFF006388FE /* AppDelegate.swift */,
-				5F3D8618223E5AFF006388FE /* ViewController.swift */,
-				5FC3CFD2223F022C0007E63C /* PersonViewController.swift */,
+				5F38CDC822484426004BF6BB /* Screen */,
 				5F3D861A223E5AFF006388FE /* Main.storyboard */,
 				5F3D861D223E5AFF006388FE /* Assets.xcassets */,
 				5F3D861F223E5AFF006388FE /* LaunchScreen.storyboard */,
@@ -188,6 +218,7 @@
 			files = (
 				5F3D8621223E5AFF006388FE /* LaunchScreen.storyboard in Resources */,
 				5F3D861E223E5AFF006388FE /* Assets.xcassets in Resources */,
+				5F38CDD2224A7052004BF6BB /* MyPersonTableViewCell.xib in Resources */,
 				5F3D861C223E5AFF006388FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F3D8619223E5AFF006388FE /* ViewController.swift in Sources */,
+				5F38CDD1224A7051004BF6BB /* MyPersonTableViewCell.swift in Sources */,
 				5F3D8617223E5AFF006388FE /* AppDelegate.swift in Sources */,
 				5F3D862C223E5F29006388FE /* Person.swift in Sources */,
 				5F3D8629223E5BE5006388FE /* PersonsServiceNetwork.swift in Sources */,
