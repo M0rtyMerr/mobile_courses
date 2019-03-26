@@ -10,16 +10,8 @@ import UIKit
 
 class MyPersonTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imagePersonView: UIImageView!
-    @IBOutlet weak var namePersonView: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
+    @IBOutlet private var imagePersonView: UIImageView!
+    @IBOutlet private var namePersonView: UILabel!
     
     var person : Person?{
         didSet{
